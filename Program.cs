@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Pokergame
@@ -13,8 +14,9 @@ namespace Pokergame
             Random rnd = new Random();
             int [] card = new int[4];
             int count;
+            int a = 0;
 
-            for(; ; )
+            for (; ; )
             {
                 count = 0;
 
@@ -25,9 +27,13 @@ namespace Pokergame
 
                 foreach (int i in card)
                 {
-                    Console.Write("{");
-                    Console.Write($"{i}");
-                    Console.Write("}");
+                    
+                    a++;
+                    Console.Write($"{a}枚目");
+                    Console.WriteLine($"[{i}]");
+                   
+                    Thread.Sleep(1000);
+                    
                 }
 
                 Console.WriteLine();
