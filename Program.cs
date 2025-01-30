@@ -24,7 +24,7 @@ namespace Pokergame
                         Console.Write($"{i + 1}枚目のカードの数値を入力 > ");
                         bool result = int.TryParse(Console.ReadLine(), out num[i]);
 
-                        if (result == false || num[i] > 4 || num[i] < 1)
+                        if (result == false || num[i] > 13 || num[i] < 1)
                         {
                             Console.WriteLine("使用できない値です");
                         }
