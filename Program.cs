@@ -50,7 +50,27 @@ namespace Pokergame
                 }
             }
 
-            //Console.WriteLine($"{count}");
+            //Console.WriteLine("{0}",count);
+
+            switch (count)
+            { 
+                case 4:
+                    Console.WriteLine("ノーペア");
+                    break;
+                case 6:
+                    Console.WriteLine("ワンペア");
+                    break;
+                case 8:
+                    Console.WriteLine("ツーペア");
+                    break;
+                case 10:
+                    Console.WriteLine("スリーカード");
+                    break;
+                case 16:
+                    Console.WriteLine("フォーカード");
+                    break;
+            }
+
 
             Console.ReadLine();
         }
