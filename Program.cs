@@ -14,11 +14,12 @@ namespace Pokergame
             Random rnd = new Random();
             int [] card = new int[4];
             int count;
-            int a = 0;
+            int a;
 
             for (; ; )
             {
                 count = 0;
+                a = 0;
 
                 for(int i = 0; i < 4; i++)
                 {
@@ -29,11 +30,12 @@ namespace Pokergame
                 {
                     
                     a++;
-                    Console.Write($"{a}枚目");
-                    Console.WriteLine($"[{i}]");
-                   
-                    Thread.Sleep(1000);
+                    Console.Write($"{a}枚目 :");
                     
+                    Console.WriteLine($"[{i}]");
+                    Thread.Sleep(1000);
+
+
                 }
 
                 Console.WriteLine();
@@ -55,19 +57,19 @@ namespace Pokergame
                 switch (count)
                 {
                     case 4:
-                        Console.WriteLine("ノーペア");
+                        Console.WriteLine("----------\nノーペア\n----------");
                         break;
                     case 6:
-                        Console.WriteLine("ワンペア");
+                        Console.WriteLine("----------\nワンペア\n----------");
                         break;
                     case 8:
-                        Console.WriteLine("ツーペア");
+                        Console.WriteLine("----------\nツーペア\n----------");
                         break;
                     case 10:
-                        Console.WriteLine("スリーカード");
+                        Console.WriteLine("----------\nスリーカード\n----------");
                         break;
                     case 16:
-                        Console.WriteLine("フォーカード");
+                        Console.WriteLine("----------\nフォーカード\n----------");
                         break;
                 }
 
@@ -86,6 +88,7 @@ namespace Pokergame
                     }
                     else
                     {
+                        Console.Clear();
                         break;
                     }
                 }
